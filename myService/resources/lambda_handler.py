@@ -2,7 +2,7 @@ import os
 import json
 
 def lambda_handler(event, context):
-    message = 'Hello {}{}'.format(event['string'], event['punctuation'])  
+    message = '{}{}'.format(event['string'], event['punctuation'])  
     return { 
         'message' : message
     }
@@ -10,7 +10,7 @@ def lambda_handler(event, context):
 
 # test
 event = {
-    "string": "World",
+    "string": "Hello World",
     "punctuation": "!"
 }
 
